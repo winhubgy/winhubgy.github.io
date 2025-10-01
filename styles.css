@@ -1042,3 +1042,41 @@ footer .footer-links {
   .nav-links.active{ display:flex; }
 }
 
+
+
+/* === Mobile Header/Menu/Footer Fixes (2025-09-30) === */
+
+/* Default: keep hamburger hidden on desktop */
+.hamburger{ display:none; }
+
+/* Phone tweaks */
+@media (max-width: 720px){
+  /* Show only the header hamburger, hide any others */
+  header .hamburger{ display:block; }
+  :not(header) > .hamburger,
+  main .hamburger,
+  .content .hamburger { display:none !important; }
+
+  /* Hide the link row on phones until toggled */
+  .nav-links{ display:none !important; flex-direction:column; gap:10px; }
+  .nav-links.active{ display:flex !important; }
+
+  /* Center and resize the site title */
+  .header-container{ justify-content:center; text-align:center; gap:8px; }
+  .header-container .logo{ width:36px; height:36px; }
+  .brand-name, .company-name{
+    font-size: 1.6rem !important;
+    line-height: 1.2;
+    margin: 0;
+    display: inline-block;
+    text-align:center;
+  }
+}
+
+/* Footer visibility & spacing */
+footer{
+  color: rgba(255,255,255,0.88);
+  padding-bottom: calc(18px + env(safe-area-inset-bottom));
+}
+footer .copyright{ opacity: 0.95; }
+
