@@ -3,12 +3,12 @@
 <html lang="en">
 <head><script src="theme-init.js"></script>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Comprehensive networking support services to keep your business connected and productive." name="description"/>
-<meta content="networking support, network setup, IT solutions, troubleshooting, network maintenance" name="keywords"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="WinterHub IT Solutions – Professional IT support, networking, security, and computer services in Guyana." name="description"/>
+<meta content="WinterHub IT Solutions, IT support, networking, CCTV installation, computer repair, data backup, Guyana" name="keywords"/>
 <link href="styles.min.css" rel="stylesheet" type="text/css"/>
 <link href="images/icon.png" rel="icon" type="image/png"/>
-<title>Networking Support | WinterHub IT Solutions</title><link href="https://winterhubitsolutions.github.io/Networking%20Support.html" rel="canonical"/><meta content="Networking Support | WinterHub IT Solutions" property="og:title"/><meta content="Professional IT services in Guyana: networking, Windows Server, CCTV, data backup, VOIP, virtualization, and support." property="og:description"/><meta content="website" property="og:type"/><meta content="https://winterhubitsolutions.github.io/Networking%20Support.html" property="og:url"/><meta content="summary" name="twitter:card"/><meta content="Networking Support | WinterHub IT Solutions" name="twitter:title"/><meta content="Professional IT services in Guyana: networking, Windows Server, CCTV, data backup, VOIP, virtualization, and support." name="twitter:description"/><meta content="default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests" http-equiv="Content-Security-Policy"/><meta content="strict-origin-when-cross-origin" name="referrer"/><meta content="nosniff" http-equiv="X-Content-Type-Options"/><meta content="#ffffff" media="(prefers-color-scheme: light)" name="theme-color"/><meta content="#111111" media="(prefers-color-scheme: dark)" name="theme-color"/><link href="manifest.webmanifest" rel="manifest"/></head>
+<title>Networking Support | WinterHub IT Solutions</title><link href="https://winterhubitsolutions.github.io/Networking%20Support.html" rel="canonical"/><meta content="Networking Support | WinterHub IT Solutions" property="og:title"/><meta content="WinterHub IT Solutions – Professional IT support, networking, security, and computer services in Guyana." property="og:description"/><meta content="website" property="og:type"/><meta content="https://winterhubitsolutions.github.io/Networking%20Support.html" property="og:url"/><meta content="summary" name="twitter:card"/><meta content="Networking Support | WinterHub IT Solutions" name="twitter:title"/><meta content="Professional IT services in Guyana: networking, Windows Server, CCTV, data backup, VOIP, virtualization, and support." name="twitter:description"/><meta content="default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests" http-equiv="Content-Security-Policy"/><meta content="strict-origin-when-cross-origin" name="referrer"/><meta content="nosniff" http-equiv="X-Content-Type-Options"/><meta content="#1e1e1e" media="(prefers-color-scheme: light)" name="theme-color"/><meta content="#111111" media="(prefers-color-scheme: dark)" name="theme-color"/><link href="manifest.webmanifest" rel="manifest"/><meta content="WinterHub IT Solutions" property="og:site_name"/></head>
 <body><a class="skip-link" href="#main">Skip to content</a>
 <header>
 <div class="header-container">
@@ -18,7 +18,7 @@
 <span class="company-name brand-name">WinterHub IT Solutions</span>
 </a>
 </div>
-</div>
+<button aria-expanded="false" aria-label="Toggle menu" class="hamburger">☰</button></div>
 <nav aria-label="Primary">
 <ul aria-label="Primary" class="nav-links" role="navigation">
 <li><a href="index.html">Home</a></li>
@@ -59,9 +59,7 @@
 <p>Contact us today for expert networking support services to keep your systems running smoothly. <a "="" class="cta-button" href="Contact.html">Get in Touch</a></p>
 </section>
 </main>
-<footer class="footer">
-        © <span id="year">2025</span> WinterHub IT Solutions. All Rights Reserved.
-    </footer>
+<footer class="footer"><div class="footer-inner"><div class="copyright">© 2025 WinterHub IT Solutions. All Rights Reserved.</div><div class="footer-links"><a href="index.html">Services</a><a href="About.html">About Us</a><a href="Contact.html">Contact</a></div></div></footer>
 <script defer="" src="scripts.min.js"></script> <!-- Added defer for better loading performance -->
 <script>
 if ('serviceWorker' in navigator) {
@@ -71,5 +69,15 @@ if ('serviceWorker' in navigator) {
   });
 }
 </script>
-</body>
+<script>
+(function(){
+  var btn = document.querySelector('.hamburger');
+  var links = document.querySelector('.nav-links');
+  if(!btn || !links) return;
+  btn.addEventListener('click', function(){
+    var isOpen = links.classList.toggle('active');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+})();
+</script></body>
 </html>

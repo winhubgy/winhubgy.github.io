@@ -738,3 +738,307 @@ footer.footer p, footer.footer span {
   width: min(100%, 1100px);
 }
 
+
+
+/* === Header Site Name Size Bump (safe, scoped) — 2025-09-30 === */
+.header-container .brand-name,
+.header-container .company-name {
+  font-size: clamp(1.9rem, 2.2vw + 0.8rem, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+
+
+
+/* === Equal Icon & Text Size (2025-09-30) === */
+
+/* Match logo icon height to text size */
+.header-container .logo {
+  height: 2.8rem; /* matches roughly the text clamp value */
+  width: auto;
+  vertical-align: middle;
+}
+
+/* Ensure text and logo align neatly */
+.header-container .brand-name,
+.header-container .company-name {
+  font-size: 2.8rem; /* same as logo height */
+  line-height: 1;
+  font-weight: 800;
+  vertical-align: middle;
+}
+
+
+
+/* === Full Site Refinements (2025-09-30) === */
+
+/* --- Navigation Bar Enhancements --- */
+.nav-links a {
+  padding: 6px 12px;
+  transition: color 0.25s ease, border-bottom 0.25s ease;
+}
+.nav-links a:hover {
+  color: #4ac6c0;
+  border-bottom: 2px solid #4ac6c0;
+}
+
+/* --- Button Styling --- */
+button, .cta-button, .services-btn, .open-btn, .close-btn {
+  background: #4ac6c0;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+button:hover, .cta-button:hover, .services-btn:hover, .open-btn:hover, .close-btn:hover {
+  transform: translateY(-2px);
+  background: #3aa7a2;
+}
+
+/* --- Footer Improvements --- */
+footer {
+  padding: 24px 20px;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+footer .footer-links {
+  margin-top: 8px;
+}
+footer .footer-links a {
+  margin: 0 10px;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+footer .footer-links a:hover {
+  color: #4ac6c0;
+}
+footer .copyright {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* --- Typography Cleanup --- */
+body {
+  font-family: 'Inter', 'Roboto', 'Segoe UI', sans-serif;
+  line-height: 1.6;
+}
+
+/* --- Responsive Header --- */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+/* --- Mobile Navigation (optional hamburger toggle) --- */
+@media (max-width: 600px) {
+  .nav-links {
+    display: none; /* hidden by default */
+  }
+  .nav-links.active {
+    display: flex; /* shown when menu opened */
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+}
+
+
+
+/* === Footer Layout Fix (2025-09-30) === */
+footer { padding: 18px 20px; }
+footer .footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+footer .copyright { font-size: 0.92rem; opacity: 0.9; }
+footer .footer-links { display: flex; gap: 18px; }
+footer .footer-links a { text-decoration: none; }
+@media (max-width: 640px){
+  footer .footer-inner { flex-direction: column; text-align: center; }
+}
+
+
+
+/* === Footer Layout (force-clean, 2025-09-30) === */
+footer { padding: 18px 20px; }
+footer .footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+footer .copyright { font-size: 0.92rem; opacity: 0.9; }
+footer .footer-links { display: flex; gap: 24px; }
+footer .footer-links a { text-decoration: none; color: inherit; }
+footer .footer-links a:hover { color: #4ac6c0; }
+@media (max-width: 640px){
+  footer .footer-inner { flex-direction: column; text-align: center; }
+}
+
+
+
+/* === Footer Alignment Fix (2025-09-30) === */
+footer {
+  padding: 18px 0; /* remove extra side padding; we'll use inner padding */
+}
+footer .footer-inner{
+  max-width: 1200px;            /* match site content width */
+  margin: 0 auto;               /* center the inner group */
+  padding: 0 20px;              /* consistent side padding */
+  display: flex;
+  align-items: center;          /* vertical alignment */
+  justify-content: space-between;
+  gap: 24px;
+}
+footer .footer-links{
+  display: flex;
+  gap: 32px;                    /* even spacing for links */
+}
+footer .copyright{
+  text-align: left;
+  white-space: nowrap;          /* keep copyright on one line */
+}
+@media (max-width: 640px){
+  footer .footer-inner{
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  footer .copyright{ white-space: normal; }
+}
+
+
+
+/* === Footer Inline Alignment Fix (2025-09-30) === */
+footer .footer-inner {
+  display: flex;
+  align-items: center;      /* vertical centering */
+  justify-content: space-between;
+  flex-wrap: nowrap;        /* keep items on one line if possible */
+}
+footer .copyright {
+  flex: 1;                  /* take up left side */
+  text-align: left;
+}
+footer .footer-links {
+  flex: 1;                  /* take up right side */
+  display: flex;
+  justify-content: flex-end;
+  gap: 32px;
+}
+@media (max-width: 768px){
+  footer .footer-inner {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  footer .footer-links {
+    justify-content: center;
+  }
+}
+
+
+
+/* === Footer Grid Alignment (2025-09-30) === */
+footer { padding: 16px 0; }
+footer .footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid !important;
+  grid-template-columns: 1fr auto;
+  align-items: center !important;  /* vertical middle */
+  gap: 24px;
+}
+footer .copyright {
+  font-size: 0.95rem;
+  line-height: 1;
+  margin: 0;
+  white-space: nowrap;
+}
+footer .footer-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+footer .footer-links a {
+  display: inline-block;
+  line-height: 1;
+  text-decoration: none;
+  color: inherit;
+}
+footer .footer-links a:hover { color: #4ac6c0; }
+
+@media (max-width: 720px){
+  footer .footer-inner {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+  footer .copyright { white-space: normal; }
+}
+
+
+
+/* === Footer Baseline Fix (2025-09-30) === */
+footer .footer-inner {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between;
+  gap: 24px;
+}
+footer .copyright,
+footer .footer-links a {
+  display: inline-flex;        /* align content inside each item */
+  align-items: center;         /* vertically center text */
+  line-height: 1 !important;   /* kill baseline wobble */
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 0.95rem;          /* same size both sides */
+}
+footer .footer-links {
+  display: inline-flex;
+  gap: 32px;
+}
+
+
+
+/* === SEO + Mobile Hamburger Menu (2025-09-30) === */
+.hamburger{
+  display:none;
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  padding: 6px 10px;
+  cursor:pointer;
+  color: inherit;
+}
+@media (max-width: 720px){
+  .hamburger{ display:block; }
+  .nav-links{ display:none; flex-direction: column; gap: 10px; }
+  .nav-links.active{ display:flex; }
+}
+
